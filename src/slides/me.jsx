@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { Background2 } from "../backgrounds";
-import Container from "../container";
+import { Container } from "../container";
 import { Btn, Discrete_btn } from "../btn_1";
 
 import c from "../assets/icons/languages/c.png"
@@ -56,16 +56,18 @@ function Infos_container() {
     }
 
     return (
-        <div className="absolute top-1/4 left-1/2 translate-x-[-50%] text-xl text-white text-opacity-50 overflow-scroll scrollbar-hide leading-6 w-min sm:w-5/6 xl:w-min h-[60%] flex flex-col sm:flex-row sm:items-start gap-8">
-            <Container><p>{t("passionate_IT_student")}</p></Container>
-            <Container><p>{t("currently_learning")}</p></Container>
-            <Container>
-                <p>{t("contact_me")}<strong className="font-extrabold">{t("contact_me_addr")}</strong></p>
-                <Btn
-                    placeholder={t("copy_email")}
-                    className={"text-lg mt-6 relative left-1/2 translate-x-[-50%]"}
-                    onclick={() => copy_to_clipboard(t("contact_me_addr"))}/>
-            </Container>
+        <div className="absolute top-1/4 left-1/2 translate-x-[-50%] text-xl text-white text-opacity-50 overflow-scroll scrollbar-hide leading-6 w-min sm:w-min h-[60%] flex flex-col sm:flex-row sm:items-start gap-8">
+            <div className="flex flex-col gap-8">
+                <Container><p>{t("passionate_IT_student")}</p></Container>
+                <Container><p>{t("currently_learning")}</p></Container>
+                <Container>
+                    <p>{t("contact_me")}<strong className="font-extrabold">{t("contact_me_addr")}</strong></p>
+                    <Btn
+                        placeholder={t("copy_email")}
+                        className={"text-lg mt-6 relative left-1/2 translate-x-[-50%]"}
+                        onclick={() => copy_to_clipboard(t("contact_me_addr"))}/>
+                </Container>
+            </div>
             <Container>
                 <p className="text-center mb-6">{t("languages")}</p>
                 <div className="flex flex-col w-fit m-auto gap-3">

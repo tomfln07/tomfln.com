@@ -26,7 +26,13 @@ const resources = {
 		},
 		slide3: {
 			"title": "Take a look at",
-			"title_highlight": "my projects"
+			"title_highlight": "my projects",
+            "huffman_title": "my_huffman",
+            "huffman_desc": "Implementation of a Huffman encoding and decoding algorithm in C.",
+            "SIP_title": "SIP Oceans Map",
+            "SIP_desc": "This website aims to raise awareness and create an impact on the issue of seas and oceans pollution",
+            "tomfln.com_title": "tomfln.com",
+            "tomfln.com_desc": "The website on which you are !",
 		}
 	},
 	fr: {
@@ -53,7 +59,13 @@ const resources = {
         },
         slide3: {
             "title": "Jetez un coup d'œil à",
-            "title_highlight": "mes projets"
+            "title_highlight": "mes projets",
+            "huffman_title": "my_huffman",
+            "huffman_desc": "_",
+            "SIP_title": "SIP Oceans Map",
+            "SIP_desc": "_",
+            "tomfln.com_title": "tomfln.com",
+            "tomfln.com_desc": "_"
         }
         
 	}
