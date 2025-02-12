@@ -19,7 +19,10 @@ const resources = {
             "currently_learning": "Currently learning about programming language theory & enhancing my C skills in my free time",
             "contact_me": "Contact me at ",
             "contact_me_addr": "contact@tomfln.com",
-            "copy_email": "Copy my email"
+            "copy_email": "Copy my email",
+            "call_to_action": "Continue",
+            "languages": "Languages",
+            "techs": "Technologies"
 		},
 		slide3: {
 			"title": "Take a look at",
@@ -43,7 +46,10 @@ const resources = {
             "currently_learning": "J'apprends la théorie derrière les langages de programmation et améliore mes compétences en C pendant mon temps libre.",
             "contact_me": "Contactez-moi à ",
             "contact_me_addr": "contact@tomfln.com",
-            "copy_email": "Copier mon email"
+            "copy_email": "Copier mon email",
+            "call_to_action": "Continuer",
+            "languages": "Languages",
+            "techs": "Technologies"
         },
         slide3: {
             "title": "Jetez un coup d'œil à",
@@ -60,7 +66,7 @@ i18n
 		interpolation: {
 			escapeValue: false
 		},
-		lng: "fr",
+		lng: "en",
 		ns: ["slide1", "slide2", "slide3"]
 	});
 

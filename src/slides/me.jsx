@@ -1,9 +1,23 @@
 import { useTranslation } from "react-i18next"
 import { Background2 } from "../backgrounds";
 import Container from "../container";
-import { Btn } from "../btn_1";
+import { Btn, Discrete_btn } from "../btn_1";
+
+import c from "../assets/icons/languages/c.png"
+import js from "../assets/icons/languages/js.png"
+import ts from "../assets/icons/languages/ts.png"
+import lua from "../assets/icons/languages/lua.png"
+import py from "../assets/icons/languages/py.png"
+import git from "../assets/icons/techs/git.png"
+import github from "../assets/icons/techs/github.png"
+import mysql from "../assets/icons/techs/mysql.png"
+import nginx from "../assets/icons/techs/nginx.png"
+import nodejs from "../assets/icons/techs/nodejs.png"
+import react from "../assets/icons/techs/react.png"
+import vite from "../assets/icons/techs/vite.png"
 
 export default function Me() {
+    const { t } = useTranslation("slide2");
 
 	return (
 		<>
@@ -11,6 +25,11 @@ export default function Me() {
                 <Background2/>
                 <Main_txt/>
                 <Infos_container/>
+                <Discrete_btn
+                    className={"absolute left-1/2 bottom-[7%] translate-x-[-50%] md:text-2xl"}
+                    placeholder={t("call_to_action")}
+                    extended_borders={true}
+                    onclick={() => window.location.hash = "#projects"}/>
             </div>
 		</>
 	)
@@ -22,7 +41,7 @@ function Main_txt() {
     return (
         <div className='text-white font-inter font-bold absolute top-8 left-8 z-20 w-5/6'>
             <h1 className='text-4xl sm:text-5xl lg:text-5xl'>{t("title")}</h1>
-            <h1 className='text-6xl sm:text-7xl lg:text-7xl bg-gradient-to-r from-[#5F2C82] to-[#49A09D] bg-clip-text text-transparent'>{t("title_highlight")}</h1>
+            <h1 className='text-6xl sm:text-7xl lg:text-7xl w-fit bg-gradient-to-r from-[#5F2C82] to-[#49A09D] bg-clip-text text-transparent'>{t("title_highlight")}</h1>
         </div>
     )
 }
@@ -37,7 +56,7 @@ function Infos_container() {
     }
 
     return (
-        <div className="absolute top-1/4 flex flex-col gap-8 left-1/2 translate-x-[-50%] w-3/4 text-xl text-white text-opacity-50 leading-6">
+        <div className="absolute top-1/4 left-1/2 translate-x-[-50%] text-xl text-white text-opacity-50 overflow-scroll scrollbar-hide leading-6 w-min sm:w-5/6 xl:w-min h-[60%] flex flex-col sm:flex-row sm:items-start gap-8">
             <Container><p>{t("passionate_IT_student")}</p></Container>
             <Container><p>{t("currently_learning")}</p></Container>
             <Container>
@@ -47,6 +66,39 @@ function Infos_container() {
                     className={"text-lg mt-6 relative left-1/2 translate-x-[-50%]"}
                     onclick={() => copy_to_clipboard(t("contact_me_addr"))}/>
             </Container>
+            <Container>
+                <p className="text-center mb-6">{t("languages")}</p>
+                <div className="flex flex-col w-fit m-auto gap-3">
+                    <div className="flex gap-3 justify-center">
+                        <Icon img={c}/>
+                        <Icon img={py}/>
+                        <Icon img={lua}/>
+                    </div>
+                    <div className="flex gap-3 justify-center">
+                        <Icon img={ts}/>
+                        <Icon img={js}/>
+                    </div>
+                </div>
+                <p className="text-center m-6">{t("techs")}</p>
+                <div className="flex flex-col w-fit m-auto gap-3">
+                    <div className="flex gap-3 justify-center">
+                        <Icon img={git}/>
+                        <Icon img={github}/>
+                        <Icon img={mysql}/>
+                        <Icon img={nginx}/>
+                    </div>
+                    <div className="flex gap-3 justify-center">
+                        <Icon img={nodejs}/>
+                        <Icon img={react}/>
+                        <Icon img={vite}/>
+                    </div>
+                </div>
+            </Container>
         </div>
     )
+}
+
+function Icon({ img })
+{
+    return <img src={img} className="w-9"/>
 }

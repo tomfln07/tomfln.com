@@ -15,7 +15,7 @@ export function Btn({ placeholder, onclick, className}) {
         <div
             onClick={onclick}
             className={`p-2 px-4 bg-white bg-opacity-10 backdrop-blur-md h-fit w-fit rounded-3xl cursor-pointer ${className} shadow-lg shadow-gray-900/50`}>
-            <p className="font-bold text-xl md:text-3xl text-white">{placeholder}</p>
+            <p className="font-bold text-xl text-white">{placeholder}</p>
         </div>
     )
 }
