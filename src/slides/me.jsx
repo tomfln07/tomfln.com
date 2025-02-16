@@ -17,16 +17,18 @@ import nginx from "../assets/icons/techs/nginx.png"
 import nodejs from "../assets/icons/techs/nodejs.png"
 import react from "../assets/icons/techs/react.png"
 import vite from "../assets/icons/techs/vite.png"
+import { Notification, useNotify } from "../notification_system";
 
 export default function Me() {
     const { t } = useTranslation("slide2");
+	const { notifs, add_notif } = useNotify();
 
 	return (
 		<>
             <div id="me" className="relative snap-start">
                 <Background2/>
                 <Main_txt/>
-                <Infos_container/>
+                <Infos_container add_notif={add_notif}/>
                 <Discrete_btn
                     className={"absolute left-1/2 bottom-[7%] translate-x-[-50%] md:text-2xl"}
                     placeholder={t("call_to_action")}
@@ -36,6 +38,7 @@ export default function Me() {
 						window.location.hash = "#projects"
 					}}/>
             </div>
+			<Notification notifs={notifs}/>
 		</>
 	)
 }
@@ -61,7 +64,7 @@ function Main_txt() {
     )
 }
 
-function Infos_container() {
+function Infos_container({ add_notif }) {
     const { t } = useTranslation("slide2");
 
     function copy_to_clipboard(text) {
@@ -85,7 +88,7 @@ function Infos_container() {
                     <Btn
                         placeholder={t("copy_email")}
                         className={"text-lg mt-6 relative left-1/2 translate-x-[-50%]"}
-                        onclick={() => copy_to_clipboard(t("contact_me_addr"))}/>
+                        onclick={() => {copy_to_clipboard(t("contact_me_addr")); add_notif(t("email_to_clipboard_confirm"))}}/>
                 </Container>
             </div>
             <Container>

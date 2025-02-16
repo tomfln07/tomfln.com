@@ -1,12 +1,11 @@
 import { useTranslation } from "react-i18next";
 import Language from "./language";
-import Separator from "./separator";
 import Home from "./slides/home";
 import Me from "./slides/me";
 import Projects from "./slides/projects";
 
 export default function App() {
-    const { t } = useTranslation("common")
+    const { t } = useTranslation("common");
 
 	document.title = t("page_title");
 
@@ -20,14 +19,15 @@ export default function App() {
             <Separator/>
             <Projects/>
         </div>
-        {/*<div className="fixed top-0 right-0 text-white">
-            <a href="#home">SLIDE 1</a>
-            <br />
-            <a href="#me">SLIDE 2</a>
-            <br />
-            <a href="#projects">SLIDE 3</a>
-        </div>*/}
-        <h1 className="fixed top-[97vh] w-full text-white text-sm font-semibold opacity-50 italic z-[999]">{t("credit")}</h1>
+		<Credit t={t}/>
 		</>
 	)
+}
+
+function Separator() {
+    return <div className="relative z-10 w-[100%] h-1 bg-stone-950"></div>
+}
+
+function Credit({ t }) {
+	return <h1 className="fixed top-[97vh] w-full text-white text-sm font-semibold opacity-50 italic z-[999]">{t("credit")}</h1>
 }

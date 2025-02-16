@@ -4,8 +4,8 @@ import { initReactI18next } from "react-i18next";
 const resources = {
 	en: {
         common: {
-            page_title: "Welcome to tomfln.com",
-            credit: "Made with ❤️ by tomfln (contact@tomfln.com)"
+            "page_title": "Welcome to tomfln.com",
+            "credit": "Made with ❤️ by tomfln (contact@tomfln.com)"
         },
 		slide1: {
 			"title": "Welcome to my",
@@ -23,7 +23,8 @@ const resources = {
             "copy_email": "Copy my email",
             "call_to_action": "Continue",
             "languages": "Languages",
-            "techs": "Technologies"
+            "techs": "Technologies",
+			"email_to_clipboard_confirm": "Email copied to clipboard."
 		},
 		slide3: {
 			"title": "Take a look at",
@@ -38,8 +39,8 @@ const resources = {
 	},
 	fr: {
         common: {
-            page_title: "Welcome to tomfln.com",
-            credit: "Réalisé avec ❤️ par tomfln (contact@tomfln.com)"
+            "page_title": "Welcome to tomfln.com",
+            "credit": "Réalisé avec ❤️ par tomfln (contact@tomfln.com)"
         },
 		slide1: {
             "title": "Bienvenue sur mon",
@@ -57,7 +58,8 @@ const resources = {
             "copy_email": "Copier mon email",
             "call_to_action": "Continuer",
             "languages": "Languages",
-            "techs": "Technologies"
+            "techs": "Technologies",
+			"email_to_clipboard_confirm": "Adresse mail copiée."
         },
         slide3: {
             "title": "Jetez un coup d'œil à",
