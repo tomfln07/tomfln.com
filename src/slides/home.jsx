@@ -56,7 +56,10 @@ function Call_to_action_btn({ t }) {
                 className={"absolute left-1/2 bottom-[15%] translate-x-[-50%] md:text-2xl"}
                 placeholder={t("call_to_action")}
                 extended_borders={true}
-                onclick={() => window.location.hash = "#me"}/>
+                onclick={() => {
+					window.location.hash = "";
+					window.location.hash = "#me";
+				}}/>
         </motion.div>
     )
 }

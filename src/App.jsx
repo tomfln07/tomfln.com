@@ -13,7 +13,7 @@ export default function App() {
 	return (
 		<>
         <Language/>
-        <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
+        <div className="h-screen overflow-y-scroll snap-y snap-mandatory scrollbar-hide">
             <Home/>
             <Separator/>
             <Me/>
@@ -27,7 +27,7 @@ export default function App() {
             <br />
             <a href="#projects">SLIDE 3</a>
         </div>*/}
-        <h1 className="fixed bottom-4 w-full text-white font-semibold opacity-50 italic z-[999]">{t("credit")}</h1>
+        <h1 className="fixed bottom-0 w-full text-white text-sm font-semibold opacity-50 italic z-[999]">{t("credit")}</h1>
 		</>
 	)
 }

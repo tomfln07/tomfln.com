@@ -31,7 +31,10 @@ export default function Me() {
                     className={"absolute left-1/2 bottom-[7%] translate-x-[-50%] md:text-2xl"}
                     placeholder={t("call_to_action")}
                     extended_borders={true}
-                    onclick={() => window.location.hash = "#projects"}/>
+                    onclick={() => {
+						window.location.hash = "";
+						window.location.hash = "#projects"
+					}}/>
             </div>
 		</>
 	)
