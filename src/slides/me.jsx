@@ -72,7 +72,7 @@ function Infos_container() {
 
     return (
         <motion.div
-            className="absolute top-1/4 left-1/2 translate-x-[-50%] text-xl text-white text-opacity-50 overflow-y-scroll overflow-x-hidden scrollbar-hide leading-6 w-min sm:w-min h-[60%] flex flex-col sm:flex-row sm:items-start gap-8"
+            className="absolute top-1/4 left-1/2 translate-x-[-50%] text-xl text-white text-opacity-50 overflow-y-scroll overflow-x-hidden scrollbar-hide leading-6 w-min sm:w-min h-[60vh] flex flex-col sm:flex-row sm:items-start gap-8"
             whileInView={containers_parent_anim.animate}
             transition={containers_parent_anim.transition}
             viewport={{ once: true }}>

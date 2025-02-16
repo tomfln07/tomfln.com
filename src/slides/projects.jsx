@@ -27,7 +27,7 @@ function Main_txt() {
                 animate={anim_main_txts.txt.animate}
                 transition={anim_main_txts.txt.transition}>{t("title")}</motion.h1>
             <motion.h1
-                className='text-6xl sm:text-7xl lg:text-7xl w-fit bg-gradient-to-r from-[#3A1C71] via-[#D76D77] via-70% to-[#FFAF7B] h-[80px] bg-clip-text text-transparent'
+                className='text-5xl sm:text-7xl lg:text-7xl w-fit bg-gradient-to-r from-[#3A1C71] via-[#D76D77] via-70% to-[#FFAF7B] h-[80px] bg-clip-text text-transparent'
                 animate={anim_main_txts.txt_highlight.animate}
                 transition={anim_main_txts.txt_highlight.transition}>{t("title_highlight")}</motion.h1>
         </div>
@@ -39,7 +39,7 @@ function Infos_container() {
 
     return (
         <motion.div
-            className="absolute top-[20%] lg:top-[40%] left-1/2 translate-x-[-50%] text-white overflow-y-scroll overflow-x-hidden scrollbar-hide leading-5 w-min lg:w-min flex flex-col lg:flex-row lg:items-start gap-8"
+            className="absolute top-[20%] lg:top-[40%] left-1/2 translate-x-[-50%] text-white overflow-y-scroll overflow-x-hidden scrollbar-hide leading-5 h-[70vh] w-min lg:w-min flex flex-col lg:flex-row lg:items-start gap-8"
             whileInView={containers_parent_anim.animate}
             transition={containers_parent_anim.transition}
             viewport={{ once: true }}>
