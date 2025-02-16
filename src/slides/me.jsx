@@ -2,6 +2,8 @@ import { useTranslation } from "react-i18next"
 import { Background2 } from "../backgrounds";
 import { Container } from "../container";
 import { Btn, Discrete_btn } from "../btn_1";
+import { motion } from "motion/react";
+import { anim_main_txts, containers_parent_anim } from "../animations_structure";
 
 import c from "../assets/icons/languages/c.png"
 import js from "../assets/icons/languages/js.png"
@@ -21,7 +23,7 @@ export default function Me() {
 
 	return (
 		<>
-            <div id="me" className="relative">
+            <div id="me" className="relative snap-start">
                 <Background2/>
                 <Main_txt/>
                 <Infos_container/>
@@ -40,8 +42,18 @@ function Main_txt() {
 
     return (
         <div className='text-white font-inter font-bold absolute top-8 left-8 z-20 w-5/6'>
-            <h1 className='text-4xl sm:text-5xl lg:text-5xl'>{t("title")}</h1>
-            <h1 className='text-6xl sm:text-7xl lg:text-7xl w-fit bg-gradient-to-r from-[#5F2C82] to-[#49A09D] bg-clip-text text-transparent'>{t("title_highlight")}</h1>
+            <motion.h1
+                className='text-4xl sm:text-5xl lg:text-5xl'
+                whileInView={anim_main_txts.txt.animate}
+                transition={anim_main_txts.txt.transition}
+                viewport={{ once: true }}>
+                {t("title")}
+            </motion.h1>
+            <motion.h1
+                className='text-6xl sm:text-7xl lg:text-7xl w-fit bg-gradient-to-r from-[#5F2C82] to-[#49A09D] bg-clip-text text-transparent'
+                whileInView={anim_main_txts.txt_highlight.animate}
+                transition={anim_main_txts.txt_highlight.transition}
+                viewport={{ once: true }}>{t("title_highlight")}</motion.h1>
         </div>
     )
 }
@@ -56,8 +68,13 @@ function Infos_container() {
     }
 
     return (
-        <div className="absolute top-1/4 left-1/2 translate-x-[-50%] text-xl text-white text-opacity-50 overflow-scroll scrollbar-hide leading-6 w-min sm:w-min h-[60%] flex flex-col sm:flex-row sm:items-start gap-8">
-            <div className="flex flex-col gap-8">
+        <motion.div
+            className="absolute top-1/4 left-1/2 translate-x-[-50%] text-xl text-white text-opacity-50 overflow-y-scroll overflow-x-hidden scrollbar-hide leading-6 w-min sm:w-min h-[60%] flex flex-col sm:flex-row sm:items-start gap-8"
+            whileInView={containers_parent_anim.animate}
+            transition={containers_parent_anim.transition}
+            viewport={{ once: true }}>
+            <div
+                className="flex flex-col gap-8">
                 <Container><p>{t("passionate_IT_student")}</p></Container>
                 <Container><p>{t("currently_learning")}</p></Container>
                 <Container>
@@ -96,7 +113,7 @@ function Infos_container() {
                     </div>
                 </div>
             </Container>
-        </div>
+        </motion.div>
     )
 }
 

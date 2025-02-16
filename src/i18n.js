@@ -4,7 +4,8 @@ import { initReactI18next } from "react-i18next";
 const resources = {
 	en: {
         common: {
-            page_title: "Welcome to tomfln.com"
+            page_title: "Welcome to tomfln.com",
+            credit: "Made with ❤️ by tomfln (contact@tomfln.com)"
         },
 		slide1: {
 			"title": "Welcome to my",
@@ -37,7 +38,8 @@ const resources = {
 	},
 	fr: {
         common: {
-            page_title: "Welcome to tomfln.com"
+            page_title: "Welcome to tomfln.com",
+            credit: "Réalisé avec ❤️ par tomfln (contact@tomfln.com)"
         },
 		slide1: {
             "title": "Bienvenue sur mon",
@@ -48,7 +50,7 @@ const resources = {
         slide2: {
             "title": "Découvrez",
             "title_highlight": "qui je suis",
-            "passionate_IT_student": "Étudiant passionné à Epitech Lille",
+            "passionate_IT_student": "Étudiant en 1re année à Epitech Lille",
             "currently_learning": "J'apprends la théorie derrière les langages de programmation et améliore mes compétences en C pendant mon temps libre.",
             "contact_me": "Contactez-moi à ",
             "contact_me_addr": "contact@tomfln.com",
@@ -61,11 +63,11 @@ const resources = {
             "title": "Jetez un coup d'œil à",
             "title_highlight": "mes projets",
             "huffman_title": "my_huffman",
-            "huffman_desc": "_",
+            "huffman_desc": "Implémentation d'un algorithme de compression / décompression (Huffman) en C.",
             "SIP_title": "SIP Oceans Map",
-            "SIP_desc": "_",
+            "SIP_desc": "Ce site à pour objectif de sensibiliser sur les problèmes liés à la pollusions des mers et des océans.",
             "tomfln.com_title": "tomfln.com",
-            "tomfln.com_desc": "_"
+            "tomfln.com_desc": "Le site sur lequel vous êtes !"
         }
         
 	}
