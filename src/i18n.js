@@ -14,10 +14,10 @@ const resources = {
             "call_to_action": "Explore"
 		},
 		slide2: {
-			"title": "Get to know",
-			"title_highlight": "about me",
+			"title": "Get to",
+			"title_highlight": "know me",
             "passionate_IT_student": "Passionate computer science student at Epitech Lille",
-            "currently_learning": "Currently learning about programming language theory & enhancing my C skills in my free time",
+            "currently_learning": "Currently learning programming language theory & improving my C skills in my free time",
             "contact_me": "Contact me at ",
             "contact_me_addr": "contact@tomfln.com",
             "copy_email": "Copy my email",
@@ -32,9 +32,9 @@ const resources = {
             "huffman_title": "my_huffman",
             "huffman_desc": "Implementation of a Huffman encoding and decoding algorithm in C.",
             "SIP_title": "SIP Oceans Map",
-            "SIP_desc": "This website aims to raise awareness and create an impact on the issue of seas and oceans pollution",
+            "SIP_desc": "This website aims to raise awareness and make an impact on the issue of ocean and sea pollution",
             "tomfln.com_title": "tomfln.com",
-            "tomfln.com_desc": "The website on which you are !",
+            "tomfln.com_desc": "The website you're on!",
 		}
 	},
 	fr: {
@@ -52,7 +52,7 @@ const resources = {
             "title": "Découvrez",
             "title_highlight": "qui je suis",
             "passionate_IT_student": "Étudiant en 1re année à Epitech Lille",
-            "currently_learning": "J'apprends la théorie derrière les langages de programmation et améliore mes compétences en C pendant mon temps libre.",
+            "currently_learning": "J'apprends la théorie derrière les langages de programmation et j'améliore mes compétences en C pendant mon temps libre.",
             "contact_me": "Contactez-moi à ",
             "contact_me_addr": "contact@tomfln.com",
             "copy_email": "Copier mon email",
@@ -62,12 +62,12 @@ const resources = {
 			"email_to_clipboard_confirm": "Adresse mail copiée."
         },
         slide3: {
-            "title": "Jetez un coup d'œil à",
-            "title_highlight": "mes projets",
+            "title": "Certains de mes",
+            "title_highlight": "projets",
             "huffman_title": "my_huffman",
             "huffman_desc": "Implémentation d'un algorithme de compression / décompression (Huffman) en C.",
             "SIP_title": "SIP Oceans Map",
-            "SIP_desc": "Ce site à pour objectif de sensibiliser sur les problèmes liés à la pollusions des mers et des océans.",
+            "SIP_desc": "Ce site a pour objectif de sensibiliser aux problèmes liés à la pollution des mers et des océans.",
             "tomfln.com_title": "tomfln.com",
             "tomfln.com_desc": "Le site sur lequel vous êtes !"
         }
